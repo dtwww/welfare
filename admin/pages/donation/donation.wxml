@@ -1,0 +1,61 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 捐款活动 ——</text>
+  </view>
+
+  <view class="search">
+    <input placeholder="请输入关键字" bindinput="inputChange"></input>
+    <icon class="searchicon" size='20' type='search'></icon>
+  </view>
+  <view class="add-view">
+    <image class="add" src='../../images/icons/add.png' bindtap='add'></image>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="content-view" wx:if="{{inputSearch == ''}}">
+    <view class="piece" wx:for="{{array}}" data-id="{{item.id}}" data-index='{{index}}'>
+      <view class="one">
+        <text>{{item.title}}</text>
+        <view class="icon">
+          <image src='../../images/icons/edit.png' bindtap='edit' data-id="{{item.id}}" data-index='{{index}}'></image>
+          <image src='../../images/icons/delete.png' bindtap='delete' data-id="{{item.id}}" data-index='{{index}}'></image>
+        </view>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content-view" wx:else>
+    <view class="piece" wx:for="{{searchArray}}" data-id="{{item.id}}" data-index='{{index}}'>
+      <view class="one">
+        <text>{{item.title}}</text>
+        <view class="icon">
+          <image src='../../images/icons/edit.png' bindtap='edit' data-id="{{item.id}}" data-index='{{index}}'></image>
+          <image src='../../images/icons/delete.png' bindtap='delete' data-id="{{item.id}}" data-index='{{index}}'></image>
+        </view>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yes">是</view>
+      <view class="btn-cancel" bindtap="no">否</view>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,63 @@
+<view class="container">
+
+
+  <view class="name">
+    <text>{{detail.name}}</text>
+  </view>
+
+  <view class="something-else">
+    <text>地点：<text>{{detail.address}}</text></text>
+    <text>截止时间：<text>{{normalDate}}</text></text>
+  </view>
+
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" circular="{{true}}">
+    <block wx:for="{{swiperImgs}}">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="introduce">
+    <text>{{detail.introduce}}</text>
+  </view>
+
+  <view class="sum">
+    <text>已竞拍至<text class="text2">{{detail.money}}</text>元</text>
+    <text class="detail" bindtap='detail' data-id='{{id}}'>查看竞拍详情>></text>
+  </view>
+
+  <view class="interested">
+    <text>对此物品感兴趣？您可以：</text>
+  </view>
+
+  <view class="operation">
+    <button bindtap='call'>询问详情</button>
+    <button bindtap='join'>我要竞拍</button>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showInputModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showInputModal}}">
+    <view class="input-modal-title">请输入竞拍价格</view>
+    <view class="input-modal-content">
+      <view class="modal-input">
+        <input type="digit" maxlength="10" bindinput="inputChange" class="input" focus='{{true}}'></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesInput">确定</view>
+      <view class="btn-cancel" bindtap="noInput">取消</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showIncompleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showIncompleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">请您完善个人信息</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="goToComplete">去完善</view>
+      <view class="btn-cancel" bindtap="noComplete">取消</view>
+    </view>
+  </view>
+
+</view>

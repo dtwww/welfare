@@ -1,0 +1,55 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 用户名单 ——</text>
+  </view>
+
+  <view class="priority-view">
+    <text style="color:{{priorityColor}}; background-color:{{priorityBgColor}}" bindtap='prioritySort'>按优先级排序</text>
+    <text style="color:{{creditColor}}; background-color:{{creditBgColor}}" bindtap='creditSort'>按信誉度排序</text>
+    <text style="color:{{sumColor}}; background-color:{{sumBgColor}}" bindtap='sumSort'>综合排序</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+
+  <view class="view" wx:if="{{isPriority}}">
+    <view class="piece" wx:for="{{priorityArray}}">
+      <view class="one" bindtap='userDetail' data-nickname='{{item.nickname}}'>
+        <text>{{item.name}}</text>
+        <text class="text2">{{item.nickname}}</text>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="view" wx:elif="{{isCredit}}">
+    <view class="piece" wx:for="{{creditArray}}">
+      <view class="one" bindtap='userDetail' data-nickname='{{item.nickname}}'>
+        <text>{{item.name}}</text>
+        <text class="text2">{{item.nickname}}</text>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="view" wx:else>
+    <view class="piece" wx:for="{{sumArray}}">
+      <view class="one" bindtap='userDetail' data-nickname='{{item.nickname}}'>
+        <text>{{item.name}}</text>
+        <text class="text2">{{item.nickname}}</text>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

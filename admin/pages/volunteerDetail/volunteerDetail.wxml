@@ -1,0 +1,64 @@
+<view class="container">
+
+
+  <view class="head-view">
+    <text class="head">—— 志愿者名单 ——</text>
+  </view>
+
+  <view class="priority-view">
+    <text style="color:{{color}}; background-color:{{bgColor}}" bindtap='sort'>按优先级排序</text>
+  </view>
+
+  <view class="line-view">
+    <view class="line"></view>
+  </view>
+  <view class="view" wx:if="{{!isPriority}}">
+    <view class="piece" wx:for="{{array}}">
+      <view class="one">
+        <text bindtap='userDetail' data-nickname='{{item.nickname}}'>{{item.name}}</text>
+        <button class="join" wx:if="{{item.joined!=1}}" bindtap='join' data-id='{{item.id}}' data-index='{{index}}' data-nickname='{{item.nickname}}'>确认加入</button>
+        <text class="join-text" wx:if="{{item.joined==1}}">已加入</text>
+        <button class="unjoin" wx:if="{{item.joined!=0}}" bindtap='unjoin' data-id='{{item.id}}' data-index='{{index}}' data-nickname='{{item.nickname}}'>取消加入</button>
+        <text class="unjoin-text" wx:if="{{item.joined==0}}">已取消</text>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+  <view class="view" wx:else>
+    <view class="piece" wx:for="{{priorityArray}}">
+      <view class="one">
+        <text bindtap='userDetail' data-nickname='{{item.nickname}}'>{{item.name}}</text>
+        <button class="join" wx:if="{{item.joined!=1}}" bindtap='join' data-id='{{item.id}}' data-index='{{index}}' data-nickname='{{item.nickname}}'>确认加入</button>
+        <text class="join-text" wx:if="{{item.joined==1}}">已加入</text>
+        <button class="unjoin" wx:if="{{item.joined!=0}}" bindtap='unjoin' data-id='{{item.id}}' data-index='{{index}}' data-nickname='{{item.nickname}}'>取消加入</button>
+        <text class="unjoin-text" wx:if="{{item.joined==0}}">已取消</text>
+      </view>
+      <view class="line-view">
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showJoinModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showJoinModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认加入？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesJoin">是</view>
+      <view class="btn-cancel" bindtap="noJoin">否</view>
+    </view>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showUnjoinModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showUnjoinModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">取消加入？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesUnjoin">是</view>
+      <view class="btn-cancel" bindtap="noUnjoin">否</view>
+    </view>
+  </view>
+
+</view>

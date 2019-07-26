@@ -1,0 +1,69 @@
+<view class="container">
+
+
+  <view class="title-view">
+    <text>标题：</text>
+    <input focus='{{true}}' bindinput='titleChange' value='{{title}}'></input>
+  </view>
+
+  <view class="address-view">
+    <text>地址：</text>
+    <input bindinput='addressChange' value='{{address}}'></input>
+  </view>
+
+  <view class="date-view">
+    <text class="jiezhi">截止日期：</text>
+    <view class="content">
+      <input bindinput='yearChange' value='{{year}}'></input>
+      <text class="text">年</text>
+      <input bindinput='monthChange' value='{{month}}'></input>
+      <text class="text">月</text>
+      <input bindinput='dayChange' value='{{day}}'></input>
+      <text class="text">日</text>
+      <input bindinput='hourChange' value='{{hour}}'></input>
+      <text class="text">时</text>
+      <input bindinput='minuteChange' value='{{minute}}'></input>
+      <text class="text">分</text>
+      <input bindinput='secondChange' value='{{second}}'></input>
+      <text class="text">秒</text>
+    </view>
+  </view>
+
+  <view class="introduce-view">
+    <text>介绍：</text>
+    <textarea bindinput='introduceChange' maxlength='-1' value='{{introduce}}'></textarea>
+  </view>
+
+  <view class="money-view">
+    <text>已捐款钱数：{{money}}元</text>
+  </view>
+
+  <view class="picture-view">
+    <view class="tupian-view">
+      <text class="tupian">图片：</text>
+      <image class="add" src='../../images/icons/add.png' bindtap='add'></image>
+    </view>
+    <view class="img-view">
+      <view wx:for='{{picturePath}}'>
+        <image src='{{item}}' bindlongpress='deletePicture' data-index='{{index}}'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="detail">
+    <text bindtap='detail' data-id='{{id}}'>查看捐款详情>></text>
+  </view>
+
+  <button bindtap='confirm'>修改</button>
+
+  <view class="modal-mask" wx:if="{{showDeleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showDeleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除该图片？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesDelete">是</view>
+      <view class="btn-cancel" bindtap="noDelete">否</view>
+    </view>
+  </view>
+
+</view>

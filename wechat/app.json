@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/activity/activity",
+    "pages/auction/auction",
+    "pages/personal/personal",
+    "pages/donationList/donationList",
+    "pages/volunteerList/volunteerList",
+    "pages/activityDetail/activityDetail",
+    "pages/auctionDetail/auctionDetail",
+    "pages/personalInfo/personalInfo",
+    "pages/personalActivity/personalActivity",
+    "pages/personalAuction/personalAuction",
+    "pages/userAuctionDetail/userAuctionDetail",
+    "pages/userDonationDetail/userDonationDetail",
+    "pages/userVolunteerDetail/userVolunteerDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EF7687",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#EF7687",
+    "list": [
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "公益活动",
+        "iconPath": "images/icons/activity_unselected.png",
+        "selectedIconPath": "images/icons/activity_selected.png"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "text": "公益拍卖",
+        "iconPath": "images/icons/auction_unselected.png",
+        "selectedIconPath": "images/icons/auction_selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "images/icons/personal_unselected.png",
+        "selectedIconPath": "images/icons/personal_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

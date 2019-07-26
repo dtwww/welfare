@@ -1,0 +1,84 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx11aaec65a1ed5833",
+	"projectname": "wechat",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "activity",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "auction",
+					"pathName": "pages/auction/auction",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "activityDetail",
+					"pathName": "pages/activityDetail/activityDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "auctionDetail",
+					"pathName": "pages/auctionDetail/auctionDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalInfo",
+					"pathName": "pages/personalInfo/personalInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalActivity",
+					"pathName": "pages/personalActivity/personalActivity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personalAuction",
+					"pathName": "pages/personalAuction/personalAuction",
+					"query": ""
+				}
+			]
+		}
+	}
+}

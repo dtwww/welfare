@@ -1,0 +1,80 @@
+<view class="container">
+
+
+  <view class='header'>
+    <view class='header-img'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <text class='nickname'>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="content">
+    <view class="name-view">
+      <text class="text1">姓名：</text>
+      <text class="text2" wx:if="{{nameEdit}}">{{nameInput}}</text>
+      <input value='{{nameInput}}' focus='{{true}}' bindinput='nameInput' wx:else></input>
+      <text class="edit" bindtap='nameEdit' wx:if="{{nameEdit}}">修改</text>
+      <text class="save" bindtap='nameSave' wx:else>保存</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="sex-view">
+      <text class="text1">性别：</text>
+      <text class="text2">{{sex}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="country-view ">
+      <text class="text1">国家：</text>
+      <text class="text2">{{country}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="province-view ">
+      <text class="text1">省份：</text>
+      <text class="text2">{{province}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="city-view">
+      <text class="text1">城市：</text>
+      <text class="text2">{{city}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="id-view">
+      <text class="text1">身份证号：</text>
+      <text class="text2" wx:if="{{idEdit}}">{{idInput}}</text>
+      <input value='{{idInput}}' focus='{{true}}' bindinput='idInput' wx:else></input>
+      <text class="edit" bindtap='idEdit' wx:if="{{idEdit}}">修改</text>
+      <text class="save" bindtap='idSave' wx:else>保存</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="phone-view">
+      <text class="text1">联系方式：</text>
+      <text class="text2" wx:if="{{phoneEdit}}">{{phoneInput}}</text>
+      <input value='{{phoneInput}}' focus='{{true}}' bindinput='phoneInput' wx:else></input>
+      <text class="edit" bindtap='phoneEdit' wx:if="{{phoneEdit}}">修改</text>
+      <text class="save" bindtap='phoneSave' wx:else>保存</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+    <view class="credit-view">
+      <text class="text1">信誉度：</text>
+      <text class="text2">{{credit}}</text>
+    </view>
+    <view class="line-view">
+      <view class="line"></view>
+    </view>
+  </view>
+
+
+</view>

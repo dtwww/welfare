@@ -1,0 +1,61 @@
+<view class="container">
+
+
+  <view class="name-view">
+    <text>名称：</text>
+    <input focus='{{true}}' bindinput='nameChange'></input>
+  </view>
+
+  <view class="address-view">
+    <text>地址：</text>
+    <input bindinput='addressChange'></input>
+  </view>
+
+  <view class="date-view">
+    <text class="jiezhi">截止日期：</text>
+    <view class="content">
+      <input bindinput='yearChange'></input>
+      <text class="text">年</text>
+      <input bindinput='monthChange'></input>
+      <text class="text">月</text>
+      <input bindinput='dayChange'></input>
+      <text class="text">日</text>
+      <input bindinput='hourChange'></input>
+      <text class="text">时</text>
+      <input bindinput='minuteChange'></input>
+      <text class="text">分</text>
+      <input bindinput='secondChange'></input>
+      <text class="text">秒</text>
+    </view>
+  </view>
+
+  <view class="introduce-view">
+    <text>介绍：</text>
+    <textarea bindinput='introduceChange' maxlength='-1'></textarea>
+  </view>
+
+  <view class="picture-view">
+    <view class="tupian-view">
+      <text class="tupian">图片：</text>
+      <image class="add" src='../../images/icons/add.png' bindtap='add'></image>
+    </view>
+    <view class="img-view">
+      <view wx:for='{{picturePath}}'>
+        <image src='{{item}}' bindlongpress='deletePicture' data-index='{{index}}'></image>
+      </view>
+    </view>
+  </view>
+
+  <button bindtap='confirm'>发布</button>
+
+  <view class="modal-mask" wx:if="{{showDeleteModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showDeleteModal}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">确认删除该图片？</view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="yesDelete">是</view>
+      <view class="btn-cancel" bindtap="noDelete">否</view>
+    </view>
+  </view>
+
+</view>

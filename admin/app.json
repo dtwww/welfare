@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/donation/donation",
+    "pages/volunteer/volunteer",
+    "pages/auction/auction",
+    "pages/user/user",
+    "pages/donationAdd/donationAdd",
+    "pages/donationEdit/donationEdit",
+    "pages/donationDetail/donationDetail",
+    "pages/volunteerAdd/volunteerAdd",
+    "pages/volunteerEdit/volunteerEdit",
+    "pages/volunteerDetail/volunteerDetail",
+    "pages/auctionAdd/auctionAdd",
+    "pages/auctionEdit/auctionEdit",
+    "pages/auctionDetail/auctionDetail",
+    "pages/userDetail/userDetail",
+    "pages/userInfo/userInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EF7687",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#EF7687",
+    "list": [
+      {
+        "pagePath": "pages/donation/donation",
+        "text": "捐款活动",
+        "iconPath": "images/icons/donation_unselected.png",
+        "selectedIconPath": "images/icons/donation_selected.png"
+      },
+      {
+        "pagePath": "pages/volunteer/volunteer",
+        "text": "志愿活动",
+        "iconPath": "images/icons/volunteer_unselected.png",
+        "selectedIconPath": "images/icons/volunteer_selected.png"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "text": "公益拍卖",
+        "iconPath": "images/icons/auction_unselected.png",
+        "selectedIconPath": "images/icons/auction_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户信息",
+        "iconPath": "images/icons/user_unselected.png",
+        "selectedIconPath": "images/icons/user_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

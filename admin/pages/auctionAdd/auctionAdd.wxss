@@ -1,0 +1,161 @@
+.container {
+  margin-top: 30rpx;
+}
+
+.name-view, .address-view, .introduce-view {
+  width: 94%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+
+input {
+  border-width: 1px;
+  border-style: none none solid none;
+  border-color: #EF7687;
+}
+
+.name-view input, .address-view input {
+  width: 570rpx;
+}
+
+.date-view, .picture-view {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ .date-view .jiezhi {
+  margin: 25rpx 0 15rpx 0;
+} 
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-view .text {
+  font-size: 30rpx;
+  color: gray;
+}
+
+.date-view input {
+  width: 90rpx;
+}
+
+.introduce-view textarea {
+  border: 1px solid #EF7687;
+  width: 570rpx;
+  height: 700rpx;
+}
+
+ .picture-view .tupian {
+  margin: 15rpx 0 15rpx 0;
+} 
+
+.tupian-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picture-view image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.img-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.img-view view {
+  width: 190rpx;
+  height: 190rpx;
+}
+
+.img-view image {
+  width: 190rpx;
+  height: 190rpx;
+}
+
+button {
+  color: white;
+  background-color: #EF7687;
+  width: 30%;
+  position: absolute;
+  margin-top: 1350rpx;
+  margin-bottom: 50rpx;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: white;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  font-size: 36rpx;
+  color: white;
+  text-align: center;
+  background-color: #ef7687;
+}
+
+.modal-content {
+  padding-top: 80rpx;
+  padding-bottom: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ef7687;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+}

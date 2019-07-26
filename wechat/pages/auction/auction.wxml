@@ -1,0 +1,67 @@
+<view class="container">
+
+
+  <view class="search">
+    <input placeholder="请输入关键字" bindinput="inputChange"></input>
+    <icon class="searchicon" size='20' type='search'></icon>
+  </view>
+
+  <view class="sort">
+    <text class="sort_time" style="color:{{timeColor}}; background-color:{{timeBgColor}}" bindtap='sortTime'>按时间排序</text>
+    <text class="sort_heat" style="color:{{heatColor}}; background-color:{{heatBgColor}}" bindtap='sortHeat'>按热度排序</text>
+  </view>
+
+<view class="content-view" wx:if="{{inputSearch == ''}}">
+  <view class="content" wx:if="{{isTime}}">
+    <view class="content-item" wx:for="{{timeArray}}" bindtap='auctionDetail' data-id="{{item.id}}">
+      <image src="{{item.picture1}}" mode="scaleToFill"></image>
+      <view class="item-text-view">
+        <view class="text">
+          <text>{{item.name}}</text>
+          <text>¥<text>{{item.money}}</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+    <view class="content" wx:else>
+    <view class="content-item" wx:for="{{heatArray}}" bindtap='auctionDetail' data-id="{{item.id}}">
+      <image src="{{item.picture1}}" mode="scaleToFill"></image>
+      <view class="item-text-view">
+        <view class="text">
+          <text>{{item.name}}</text>
+          <text>¥<text>{{item.money}}</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="content-view" wx:else>
+  <view class="content" wx:if="{{isTime}}">
+    <view class="content-item" wx:for="{{searchTimeArray}}" bindtap='auctionDetail' data-id="{{item.id}}">
+      <image src="{{item.picture1}}" mode="scaleToFill"></image>
+      <view class="item-text-view">
+        <view class="text">
+          <text>{{item.name}}</text>
+          <text>¥<text>{{item.money}}</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+    <view class="content" wx:else>
+    <view class="content-item" wx:for="{{searchHeatArray}}" bindtap='auctionDetail' data-id="{{item.id}}">
+      <image src="{{item.picture1}}" mode="scaleToFill"></image>
+      <view class="item-text-view">
+        <view class="text">
+          <text>{{item.name}}</text>
+          <text>¥<text>{{item.money}}</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+</view>
